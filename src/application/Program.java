@@ -18,7 +18,6 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-		SimpleDateFormat sdf1 = new SimpleDateFormat("MM/yyyy");
 		
 		System.out.print("Entre o nome do departamento: ");
 		String departmentName = sc.nextLine();
