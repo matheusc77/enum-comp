@@ -79,6 +79,7 @@ public class Worker {
 				sum += c.totalValue();
 			}
 		}
+		return sum;
 	}
 
 }
