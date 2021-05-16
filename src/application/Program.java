@@ -17,7 +17,8 @@ public class Program {
 
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
-		SimpleDateFormat sdf = new SimpleDateFormat("dd/mm/yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
+		SimpleDateFormat sdf1 = new SimpleDateFormat("MM/yyyy");
 		
 		System.out.print("Entre o nome do departamento: ");
 		String departmentName = sc.nextLine();
@@ -44,6 +45,13 @@ public class Program {
 			worker.addContract(contract);
 		}
 		
+		System.out.print("Entre o mês e ano para calcular renda: ");
+		String dateIn = sc.next();
+		int month = Integer.parseInt(dateIn.substring(0, 2));
+		int year = Integer.parseInt(dateIn.substring(3));
+		System.out.println("Nome: " + worker.getName());
+		System.out.println("Departamento: " + worker.getDepartment().getName());
+		System.out.println("Salário do mês " + dateIn + ": " + String.format("%.2f", worker.income(year, month)));
 		
 		sc.close();
 		
